@@ -1,5 +1,5 @@
 from gevent import monkey
-monkey.patch_socket()#不能patch_all,这样会没办法用线程池
+monkey.patch_socket()#不能用patch_all,这样会没办法用进程池
 from concurrent.futures import ProcessPoolExecutor
 import time
 from gevent import pywsgi
